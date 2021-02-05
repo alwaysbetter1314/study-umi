@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card , Button} from 'antd';
 import { connect } from 'dva';
 
+const thisIsATest = 'add';
 const namespace = 'puzzlecards';
 // 状态转为参数
 const mapStateToProps = (state) => {
