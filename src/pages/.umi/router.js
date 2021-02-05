@@ -14,68 +14,26 @@ const Router = routerRedux.ConnectedRouter;
 
 const routes = [
   {
+    path: '/css-modules-with-antd',
+    exact: true,
+    component: require('../css-modules-with-antd/index.jsx').default,
+  },
+  {
+    path: '/css-modules-with-less',
+    exact: true,
+    component: require('../css-modules-with-less/index.jsx').default,
+  },
+  {
     path: '/',
-    component: require('../../layout').default,
-    routes: [
-      {
-        path: '/',
-        component: require('../puzzlecards').default,
-        exact: true,
-      },
-      {
-        path: '/helloworld',
-        component: require('../Helloworld').default,
-        exact: true,
-      },
-      {
-        path: '/puzzlecards',
-        component: require('../puzzlecards').default,
-        exact: true,
-      },
-      {
-        path: '/dashboard',
-        routes: [
-          {
-            path: '/dashboard/analysis',
-            component: require('../Dashboard/Analysis').default,
-            exact: true,
-          },
-          {
-            path: '/dashboard/monitor',
-            component: require('../Dashboard/Monitor').default,
-            exact: true,
-          },
-          {
-            path: '/dashboard/workspace',
-            component: require('../Dashboard/Workspace').default,
-            exact: true,
-          },
-          {
-            component: () =>
-              React.createElement(
-                require('D:/ws/Demo-start/atnd-start/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
-                  .default,
-                { pagesPath: 'src/pages', hasRoutesInConfig: true },
-              ),
-          },
-        ],
-      },
-      {
-        component: () =>
-          React.createElement(
-            require('D:/ws/Demo-start/atnd-start/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
-              .default,
-            { pagesPath: 'src/pages', hasRoutesInConfig: true },
-          ),
-      },
-    ],
+    exact: true,
+    component: require('../index.jsx').default,
   },
   {
     component: () =>
       React.createElement(
         require('D:/ws/Demo-start/atnd-start/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
-        { pagesPath: 'src/pages', hasRoutesInConfig: true },
+        { pagesPath: 'src/pages', hasRoutesInConfig: false },
       ),
   },
 ];

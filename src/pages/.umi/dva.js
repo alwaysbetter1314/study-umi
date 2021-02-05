@@ -20,7 +20,7 @@ export function _onCreate() {
     app.use(plugin);
   });
   
-  app.model({ namespace: 'puzzlecards', ...(require('D:/ws/Demo-start/atnd-start/src/models/puzzlecards.js').default) });
+  
   return app;
 }
 
